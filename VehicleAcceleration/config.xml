@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<additional>
+  <functions>
+    <!--程序\CitGen_____程序\CitGen.exe-->
+    <function url="程序\CitGen">CitGen</function>
+    <function url="程序\CitGen">CitGendd</function>  
+    <function url="程序\CitGen.exe">远程</function>
+  </functions> 
+</additional>

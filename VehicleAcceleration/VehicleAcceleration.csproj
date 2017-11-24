@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7B6F016-8F3F-4097-BD24-9EECFEE578BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VehicleAcceleration</RootNamespace>
+    <AssemblyName>VehicleAcceleration</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccelerationOnLine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\AccelerationOnLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\Common\Libs\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="DundasWinChart">
+      <HintPath>..\Common\Libs\DundasWinChart.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray, Version=2.11.1.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Libs\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\Common\Libs\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\Common\Libs\NOPI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\Common\Libs\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BootPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BootPage.Designer.cs">
+      <DependentUpon>BootPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ParameterSetting\BoundaryLineDAL.cs" />
+    <Compile Include="Classes\ParameterSetting\DeviationParameterDAL.cs" />
+    <Compile Include="Classes\LineStandingBook\StandingBookDAL.cs" />
+    <Compile Include="Classes\ParameterSetting\BasicInfoDAL.cs" />
+    <Compile Include="Classes\ParameterSetting\CalculaterParamterDAL.cs" />
+    <Compile Include="Classes\ParameterSetting\ChannelFreqParamterDAL.cs" />
+    <Compile Include="Classes\ChannelRmsMean\RmsMeanDAL.cs" />
+    <Compile Include="Classes\CommonClass.cs" />
+    <Compile Include="Classes\Matlab\MatlabCalcParamterDAL.cs" />
+    <Compile Include="Classes\Matlab\MatlabCalcParamterPartDAL.cs" />
+    <Compile Include="Classes\Statistics\OverValueDataResultDAL.cs" />
+    <Compile Include="Classes\ParameterSetting\StartupParameterDAL.cs" />
+    <Compile Include="Classes\Statistics\WaveDataResultDAL.cs" />
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\ConfigHelper.cs" />
+    <Compile Include="Common\GenerateWord.cs" />
+    <Compile Include="Common\Matlab_API.cs" />
+    <Compile Include="Common\NOPIHelper.cs" />
+    <Compile Include="Forms\ReportPrint\BuildReportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportPrint\BuildReportExcel.Designer.cs">
+      <DependentUpon>BuildReportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportPrint\BuildReportWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportPrint\BuildReportWord.Designer.cs">
+      <DependentUpon>BuildReportWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportPrint\ScatterDiagramSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportPrint\ScatterDiagramSet.Designer.cs">
+      <DependentUpon>ScatterDiagramSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SectionStatistics\DataList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SectionStatistics\DataList.Designer.cs">
+      <DependentUpon>DataList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SectionStatistics\MaxValueStatictics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SectionStatistics\MaxValueStatictics.Designer.cs">
+      <DependentUpon>MaxValueStatictics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SectionStatistics\OverValueStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SectionStatistics\OverValueStatistics.Designer.cs">
+      <DependentUpon>OverValueStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SystemMenu\ParameterSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemMenu\ParameterSet.Designer.cs">
+      <DependentUpon>ParameterSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SystemMenu\RealTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemMenu\RealTime.Designer.cs">
+      <DependentUpon>RealTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SystemMenu\ShowData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemMenu\ShowData.Designer.cs">
+      <DependentUpon>ShowData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaveFormProcessing\ScatterDiagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaveFormProcessing\ScatterDiagram.Designer.cs">
+      <DependentUpon>ScatterDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ParameterSetting\BoundaryLine.cs" />
+    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\ParameterSetting\DeviationParameter.cs" />
+    <Compile Include="Model\Enum\StandingBookEnum.cs" />
+    <Compile Include="Model\LineStandingBook\StandingBook.cs" />
+    <Compile Include="Model\LineStandingBook\StandingBookDetail.cs" />
+    <Compile Include="Model\ParameterSetting\BasicInfo.cs" />
+    <Compile Include="Model\ParameterSetting\CalculaterParamter.cs" />
+    <Compile Include="Model\Enum\ChannelEnum.cs" />
+    <Compile Include="Model\ParameterSetting\ChannelFreqParamter.cs" />
+    <Compile Include="Model\DeviationTable.cs" />
+    <Compile Include="Model\ChannelRmsMean\LineInfo.cs" />
+    <Compile Include="Model\ParameterSetting\MatlabCalcParamter.cs" />
+    <Compile Include="Model\Statistics\OverValueDataResult.cs" />
+    <Compile Include="Model\ReplaceWordData.cs" />
+    <Compile Include="Model\Enum\RightMenuItemEnum.cs" />
+    <Compile Include="Model\ChannelRmsMean\RmsMeanInfo.cs" />
+    <Compile Include="Model\ParameterSetting\StartupParameter.cs" />
+    <Compile Include="Model\ThreadParameter.cs" />
+    <Compile Include="Model\UniversalModel.cs" />
+    <Compile Include="Model\Statistics\WaveDataResult.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\PointChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PointChart.Designer.cs">
+      <DependentUpon>PointChart.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BootPage.resx">
+      <DependentUpon>BootPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportPrint\BuildReportExcel.resx">
+      <DependentUpon>BuildReportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportPrint\BuildReportWord.resx">
+      <DependentUpon>BuildReportWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportPrint\ScatterDiagramSet.resx">
+      <DependentUpon>ScatterDiagramSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SectionStatistics\DataList.resx">
+      <DependentUpon>DataList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SectionStatistics\MaxValueStatictics.resx">
+      <DependentUpon>MaxValueStatictics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SectionStatistics\OverValueStatistics.resx">
+      <DependentUpon>OverValueStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemMenu\ParameterSet.resx">
+      <DependentUpon>ParameterSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemMenu\RealTime.resx">
+      <DependentUpon>RealTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemMenu\ShowData.resx">
+      <DependentUpon>ShowData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaveFormProcessing\ScatterDiagram.resx">
+      <DependentUpon>ScatterDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\PointChart.resx">
+      <DependentUpon>PointChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NLog.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CitFileProcess\CitFileProcess.csproj">
+      <Project>{A8EBCEAA-82B9-46FB-9734-F3B8AF5A1942}</Project>
+      <Name>CitFileProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{F53DE778-D807-4D49-8352-200134FC8310}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccelerationOnLine.dll" />
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\word.png" />
+    <None Include="Resources\excel 表.png" />
+    <None Include="Resources\超限统计.png" />
+    <None Include="Resources\统计.png" />
+    <None Include="Resources\散点.png" />
+    <None Include="Resources\计算.png" />
+    <None Include="Resources\加载.png" />
+    <None Include="Resources\shishi.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
